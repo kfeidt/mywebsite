@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello!</title>
+    <title>Kristina Feidt - Transformation & Leadership</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,22 +17,123 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #fafafa;
+            color: #333;
+            line-height: 1.7;
+        }
+        
+        /* Hello Section */
+        .hello-section {
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
         }
         
-        h1 {
+        .hello-section h1 {
             font-size: clamp(4rem, 15vw, 12rem);
             font-weight: 200;
-            color: #333;
             letter-spacing: -0.02em;
             text-align: center;
+        }
+        
+        /* Content Section */
+        .content-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .name {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 200;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .pitch {
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .contact {
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            font-weight: 300;
+            color: #666;
+        }
+        
+        .contact a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact a:hover {
+            border-color: #333;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        @media (max-width: 480px) {
+            .content-section {
+                padding: 1rem 0.5rem;
+            }
+            
+            .container {
+                gap: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hello!</h1>
+    <!-- Hello Section - Full Screen -->
+    <section class="hello-section">
+        <h1>Hello!</h1>
+    </section>
+    
+    <!-- Content Section - Full Screen -->
+    <section class="content-section">
+        <div class="container">
+            <div>
+                <div class="name">Kristina Feidt</div>
+                <div class="subtitle">
+                    Psychologin • Agile Coach • Autorin
+                </div>
+            </div>
+            
+            <div class="pitch">
+                Ich bringe Unternehmen und Teams durch Veränderung.<br>
+                Mit psychologischem Know-how und 10+ Jahren Erfahrung in Konzernen, Mittelstand und Behörden.<br>
+                Von Leadership-Entwicklung bis digitaler Transformation – wenn Menschen und Prozesse zusammenpassen sollen.
+            </div>
+            
+            <div class="contact">
+                <a href="mailto:kris@krisfight.de">Let's talk →</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
